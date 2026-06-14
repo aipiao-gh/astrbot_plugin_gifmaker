@@ -25,19 +25,13 @@ def getimg(qq, key, api, timeout):
     try:
         response = httpx.get(url, params=params, timeout=timeout)
         data = response.json()
-    except (httpx.HTTPStatusError, httpx.ReadTimeout) as e:
+    except IOError as e:
         logger.error(f"API 服务异常 (HTTP {e})")
         return error_img_path
-    code = data['code']
-    if code == 200:
+    else:
         img_url = data['data']['url']
         return img_url
-    elif code in error_code:
-        logger.error(f'制作失败，错误代码：{code}')
-        return error_img_path
-    else:
-        logger.error('制作失败，原因未知')
-        return "未知错误"
+
 
 
 class MyPlugin(Star):
