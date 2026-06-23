@@ -25,7 +25,7 @@ def getimg(qq, key, api, timeout):
     try:
         response = httpx.get(url, params=params, timeout=timeout)
         data = response.json()
-    except IOError as e:
+    except Exception as e:
         logger.error(f"API 服务异常 (HTTP {e})")
         return error_img_path
     else:
