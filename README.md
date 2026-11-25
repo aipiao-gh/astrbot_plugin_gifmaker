@@ -8,13 +8,16 @@
 > 如果不填写`< >`则生成使用命令的
 
 ### 参数
-`Key`请前往`https://api.xiaoyu17love.top/` 申请
+`Key`请前往 [小宇API](https://api.xiaoyu17love.top/) 申请
 
 ### 指令
 | 命令    | 描述          | 默认权限 |
 |:------|:------------|:---|
 | doro  | 生成一个doro砸脑袋 | 普通 |
 | arona | 生成一个阿罗娜丢出去  | 普通 |
+|plana|生成一个普拉那吃|普通|
+|capoo|生成capoo打飞群友|普通|
+|capoohit|生成capoo暴打群友|普通|
 
 ## 平台支持
 - QQ
